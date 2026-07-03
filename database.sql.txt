@@ -1,0 +1,11 @@
+CREATE DATABASE expense_tracker;
+
+USE expense_tracker;
+
+CREATE TABLE expenses (
+    expense_id INT PRIMARY KEY AUTO_INCREMENT,
+    category VARCHAR(100),
+    amount DOUBLE,
+    expense_date DATE,
+    description VARCHAR(255)
+);
