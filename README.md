@@ -1,75 +1,105 @@
 
 # Personal Expense Tracker
 
-A console-based Java application that helps users manage daily expenses using JDBC and MySQL. This project demonstrates CRUD operations, database connectivity, and object-oriented programming concepts.
+## Overview
+Personal Expense Tracker is a Java console-based application developed using JDBC and MySQL. It helps users manage daily expenses by allowing them to add, view, update, and delete expense records. The project demonstrates CRUD operations, database connectivity, and object-oriented programming concepts.
 
 ## Features
-
-- Add a new expense
+- Add new expenses
 - View all expenses
-- Search expenses by category
-- Update an existing expense
-- Delete an expense
-- View total expenses
-- View monthly expense summary
-- Menu-driven console interface
+- View expenses by category
+- Update existing expenses
+- Delete expenses
+- Calculate total expenses
+- Store data securely in MySQL database
+- Menu-driven console application
 
 ## Technologies Used
-
 - Java
 - JDBC
 - MySQL
 - Eclipse IDE
-- MySQL Workbench
+- MySQL Connector/J
+- Git & GitHub
 
+## Project Structure
+```
+personal_expense_tracker/
+│
+├── src/
+│   ├── com.personalexpensetracker.dao/
+│   ├── com.personalexpensetracker.main/
+│   ├── com.personalexpensetracker.model/
+│   └── com.personalexpensetracker.util/
+│
+├── database.sql
+├── db.properties
+├── .classpath
+└── .project
+```
 
 ## Database
-
-Create a MySQL database named: expense_tracker
-
-Create the required table before running the application.
-
-Update `db.properties` with your MySQL credentials.
+Create a MySQL database named: personal_expense_tracker
 
 
-_db.properties_
-db.url=jdbc:mysql://localhost:3306/expense_tracker
-db.user=root
-db.password=your_password
+Run the SQL script provided in: database.sql
+
+Update the database credentials in: db.properties
+
+Example:
+
+url=jdbc:mysql://localhost:3306/expense_tracker
+username=root
+password=your_password
+
 
 ## How to Run
 
 1. Clone the repository.
-2. Import the project into Eclipse IDE.
-3. Add MySQL Connector/J to the project's Build Path.
-4. Create the `expense_tracker` database and required table.
-5. Update `db.properties`.
+
+```
+git clone https://github.com/your-username/personal_expense_tracker.git
+```
+
+2. Import the project into Eclipse.
+
+3. Add MySQL Connector/J to the project build path.
+
+4. Create the database using the SQL script.
+
+5. Update `db.properties` with your MySQL credentials.
+
 6. Run `Main.java`.
 
 ## Sample Menu
 
-===== PERSONAL EXPENSE TRACKER =====
+```
+===== Personal Expense Tracker =====
 
 1. Add Expense
 2. View All Expenses
-3. View Expenses by Category
+3. View Expense by Category
 4. Update Expense
 5. Delete Expense
 6. View Total Expense
-7. View Monthly Total
 0. Exit
 ```
 
-## Skills Demonstrated
-
-- Core Java
+## Concepts Covered
 - Object-Oriented Programming (OOP)
-- JDBC
-- MySQL
+- JDBC Connectivity
 - CRUD Operations
+- MySQL Database
+- DAO Design Pattern
 - Exception Handling
 - Collections
-- File Handling using Properties
-- DAO Design Pattern
+- File Handling using Properties File
 
+## Future Enhancements
+- User Login & Registration
+- Monthly Expense Reports
+- Budget Management
+- Export Reports to PDF or Excel
+- GUI using JavaFX or Swing
+- Spring Boot REST API
 
